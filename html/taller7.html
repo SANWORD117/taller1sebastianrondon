@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/taller7.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Registro de Usuario</title>
+</head>
+<body>
+    <header class="text-center">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo representante de la página">
+        <h1 class="The Tales of Sebastian">The Tales of Sebastian</h1>
+      </div>
+      <nav>
+        <a href="../index.html" class="nav-link">Página Principal</a>
+        <a href="taller1.html" class="nav-link">Taller 1</a>
+        <a href="taller2.html" class="nav-link">Taller 2</a>
+        <a href="taller3.html" class="nav-link">Taller 3</a>
+        <a href="taller4.html" class="nav-link">Taller 4</a>
+        <a href="taller5.html" class="nav-link">Taller 5</a>
+        <a href="taller6.html" class="nav-link">Taller 6</a>
+        <a href="taller7.html" class="nav-link">Taller 7</a>
+      </nav>
+    </header>
+
+  <div class="container">
+    <div class="content">
+      <form class="caja" id="registrationForm" novalidate>
+        <label for="documentType">Tipo de documento:</label>
+        <select name="documentType" id="documentType" required>
+          <option value="0">Seleccionar</option>
+          <option value="CC">Cédula de Ciudadanía</option>
+          <option value="TI">Tarjeta de Identidad</option>
+          <option value="CE">Cédula de Extranjería</option>
+          <option value="PAS">Pasaporte</option>
+        </select>
+
+        <div class="registrationForm">
+          <div id="camponoDoc">
+            <label for="documentNumber">No. Documento:</label>
+            <input type="number" name="noDoc" id="noDoc" class="" placeholder="Ingrese su número de documento" required>
+            <div class="feedback"></div>
+          </div>
+
+          <div id="campoNombre">
+            <label for="firstName">Nombre:</label>
+            <input type="text" name="Nombre" id="Nombre" class="" placeholder="Ingrese su nombre" required>
+            <div class="feedback"></div>
+          </div>
+
+          <div id="campoApellido">
+            <label for="lastName">Apellido:</label>
+            <input type="text" name="apellido" id="Apellido" class="" placeholder="Ingrese su apellido" required>
+            <div class="feedback"></div>
+          </div>
+
+          <div id="campoFeNac">
+            <label for="FeNac">Fecha de Nacimiento:</label>
+            <input type="date" name="FeNac" id="FeNac" class="" required>
+            <div class="feedback"></div>
+          </div>
+
+          <div id="campoCorreo">
+            <label for="Correo">Correo electrónico:</label>
+            <input type="email" name="Correo" id="Correo" class="" placeholder="Ingrese su correo electrónico" required>
+            <div class="feedback"></div>
+          </div>
+
+          <div id="campopassword">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" class="" placeholder="Ingrese su contraseña" required>
+            <div class="feedback"></div>
+          </div>
+
+          <div id="campoPasswordConf">
+            <label for="confirmPassword">Confirmar Contraseña:</label>
+            <input type="password" id="confirmPassword" class="" placeholder="Confirme su contraseña" required>
+            <div class="feedback"></div>
+          </div>
+        </div>
+
+        <label for="termsCheck">
+          <input type="checkbox" id="termsCheck" class="" required>
+          <span>Acepto los Términos de Uso</span>
+        </label>
+
+        <button type="submit" class="ov-btn-grow-skew">Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">X</span>
+      <h2>Términos de Uso</h2>
+      <p>Aquí van los términos de uso</p>
+      <br>
+      <p>1. Sera Paraco :v</p>
+      <br>
+      <p>2. Rezarle al Ferxxo</p>
+      <br>
+      <p>3. Verse la Champions</p>
+      <br>
+      <p>4. Verse la final Nacional vs. Millonarios</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Todos los Derechos estan reservados Joel Sebastian R. ©2023</p>
+  </footer>
+
+  <script type="text/javaScript" src="../js/taller7.js"></script>
+</body>
+</html>

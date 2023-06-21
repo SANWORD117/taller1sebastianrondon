@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sebastian R.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Js </title>
+    <link rel="stylesheet" href="../css/taller2.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+    <header class="text-center">
+        <div class="logo">
+        <img src="../img/logo.png" alt="Logo representante de la página">
+        <h1 class="The Tales of Sebastian">The Tales of Sebastian</h1>
+    </div>
+        <nav>
+            <a href="../index.html" class="nav-link">Página Principal</a>
+            <a href="taller1.html" class="nav-link">Taller 1</a>
+            <a href="taller2.html" class="nav-link">Taller 2</a>
+            <a href="taller3.html" class="nav-link">Taller 3</a>
+            <a href="taller4.html" class="nav-link">Taller 4</a>
+            <a href="taller5.html" class="nav-link">Taller 5</a>
+            <a href="taller6.html" class="nav-link">Taller 6</a>
+            <a href="taller7.html" class="nav-link">Taller 7</a>
+        </nav>
+    </header>
+    <section class="text-center">
+    <main class="form-signin w-100 m-auto">
+        <div class="container2">
+            <div class="content">
+            <table border="1px">
+                <thead>
+                    <th>Evento</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </thead>
+                <div class="form-column">
+                    <td>
+                        <p>OnClick</p>
+                    <script>
+                        function doTask() {
+                          alert("Hello!");
+                        }
+                      </script>
+                    <td><p>El evento "click" se dispara cuando se presiona el botón de un dispositivo de entrada (Mouse o Mousepad) sobre un elemento.</p></td>
+                    </td>  
+                    <td><button onClick="doTask()">Presiona para Saludar</button></td>
+
+                    <thead>
+                        <td>Blur</td>
+                        <td><p>El evento blur es disparado cuando un elemento ha perdido su foco. La diferencia principal entre este evento y focusout (en-US) es que sólo el último se propaga (bubbles).</p></td>
+                        <td>
+                            <input type="text" onblur="validarCampo(this.value)" />
+
+                            <script>
+                            function validarCampo(valor) {
+                                // Validar el valor ingresado
+
+                                // ...
+                            }
+                            </script>
+                        </td>
+                    </thead>
+
+                    <thead>
+                        <td>Click</td>
+                        <td><p>El evento "click" se dispara cuando se presiona el botón de un dispositivo de entrada (Mouse o Mousepad) sobre un elemento.</p></td>
+                        <td>
+                            <buttom id="prueba">Tocame</buttom>
+
+                            <script>
+
+                              document.getElementById("prueba").addEventListener("click", function( event ) {
+                                // presentar la cuenta de clicks realizados sobre el elemento con id "prueba"
+                                //event.target.innerHTML = "Me has tocado " + event.detail;
+                                alert("Me has tocado")
+                              }, false);
+
+                            </script>
+                        </td>
+                    </thead>
+
+                    <thead>
+                        <td>OnLoad</td>
+                        <td><p>Se dispara cuando la página HTML y todos sus recursos se han cargado completamente.</p></td>
+                        <td>
+                            <p>Es el alert que aparecio al cargar esta página</p>
+                            <script>
+                                window.onload = function() {
+                                  // Código a ejecutar cuando la página se haya cargado
+                                  alert("Se ha cargado la pagina")
+                                };
+                              </script>
+                        </td>
+                    </thead>
+
+                    <thead>
+                        <td>OnKeydown</td>
+                        <td><p>Se dispara cuando se presiona una tecla en un campo de entrada.</p></td>
+                        <td>
+                            <input type="text" onkeydown="myFunction()">
+
+                            <script>
+                              function myFunction() {
+                                // Código a ejecutar cuando se presiona una tecla
+                                alert("Se ha tocado una tecla")
+                              }
+                            </script>
+                        </td>
+                    </thead>
+                        
+                    <thead>
+                        <td>MouseEnter</td>
+                        <td><p>Se activa cuando el puntero del mouse entra en un elemento. Es similar al evento "mouseover", pero no se propaga a los elementos secundarios.</p></td>
+                        <td>
+                            <div onmouseenter="mostrarMensaje()"><button id="b1">Mueve el mouse aquí</button></div>
+
+                            <script>
+                            function mostrarMensaje() {
+                                // Mostrar un mensaje o realizar acciones al ingresar al elemento
+                                alert("Has entrado al texto")
+                            }
+                            </script>
+                        </td>
+                    </thead>
+
+                    <thead>
+                        <td>MouseLeave</td>
+                        <td><p> Se dispara cuando el puntero del mouse sale de un elemento. Al igual que "mouseenter", no se propaga a los elementos secundarios</p></td>
+                        <td>
+                            <div onmouseleave="ocultarMensaje()"><button id="b2">Mueve el mouse aquí</button></div>
+
+                            <script>
+                            function ocultarMensaje() {
+                                // Ocultar un mensaje o realizar acciones al salir del elemento
+                                alert("Te saliste del texto")
+                            }
+                            </script>
+                        </td>
+                    </thead>
+
+                    <thead>
+                        <td>Focus</td>
+                        <td><p>Se activa cuando un elemento obtiene el foco. Puedes usarlo para resaltar o mostrar información adicional sobre un elemento cuando el usuario interactúa con él.</p></td>
+                        <td>
+                            <input type="text" onfocus="resaltarCampo(this)" />
+
+                            <script>
+                            function resaltarCampo(elemento) {
+                                // Resaltar el campo o mostrar información adicional
+                                // ...
+                            }
+                            </script>
+                        </td>
+                    </thead>
+
+                    <thead>
+                        <td>Sumbit</td>
+                        <td><p>Se dispara cuando se envía un formulario. Puedes usarlo para validar los datos antes de enviarlos al servidor.</p></td>
+                        <td>
+                            <form onsubmit="validarFormulario(event)">
+                                <!-- Campos del formulario -->
+                                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu Nombre" />
+                                <!-- ...otros campos... -->
+                                <button type="submit">Enviar</button>
+                              </form>
+                              
+                              <script>
+                                const nombre=document.getElementById("nombre").value
+                                function validarFormulario(event) {
+                                  event.preventDefault(); // Evita el envío del formulario por defecto
+                              
+                                  // Validación del formulario
+                                    
+                                    alert("Ingresaste tu nombre")
+                                    
+                                  }
+                                
+                              </script>
+                        </td>
+                    </thead>
+
+                    <thead>
+                        <td>DblClick</td>
+                        <td><p>Este evento se utiliza comúnmente para capturar acciones del usuario que involucran doble clic, como abrir una ventana emergente o ampliar una imagen.</p></td>
+                        <td>
+                            <button id="miBoton">Haz doble clic aquí</button>
+
+                            <script>
+                                // Obtén una referencia al elemento del botón
+                                var boton = document.getElementById("miBoton");
+
+                                // Agrega el controlador de eventos para el evento dblclick
+                                boton.addEventListener("dblclick", function() {
+                                alert("¡Has hecho doble clic en el botón!");
+                                });
+                            </script>
+                        </td>
+                    </thead>
+
+                </div>
+            </table>
+            </div>
+        </div>
+    </section>
+</body>
+<footer><p>Todos los Derechos estan reservados Joel Sebastian R. ©2023</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
